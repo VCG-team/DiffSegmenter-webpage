@@ -319,33 +319,43 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We present the first method capable of photorealistically
-                reconstructing a non-rigidly deforming scene using photos/videos
-                captured casually from mobile phones.
+                Recent research has explored the utilization of pre-trained
+                text-image discriminative models, such as <i>CLIP</i>, to tackle
+                the challenges associated with open-vocabulary semantic
+                segmentation. However, it is worth noting that the alignment
+                process based on contrastive learning employed by these models
+                may unintentionally result in the loss of crucial localization
+                information and object completeness, which are essential for
+                achieving accurate semantic segmentation.
               </p>
               <p>
-                Our approach augments neural radiance fields (NeRF) by
-                optimizing an additional continuous volumetric deformation field
-                that warps each observed point into a canonical 5D NeRF. We
-                observe that these NeRF-like deformation fields are prone to
-                local minima, and propose a coarse-to-fine optimization method
-                for coordinate-based models that allows for more robust
-                optimization. By adapting principles from geometry processing
-                and physical simulation to NeRF-like models, we propose an
-                elastic regularization of the deformation field that further
-                improves robustness.
+                More recently, there has been an emerging interest in extending
+                the application of diffusion models beyond text-to-image
+                generation tasks, particularly in the domain of semantic
+                segmentation. These approaches utilize diffusion models either
+                for generating annotated data or for extracting features to
+                facilitate semantic segmentation. This typically involves
+                training segmentation models by generating a considerable amount
+                of synthetic data or incorporating additional mask annotations.
+                To this end, we uncover the potential of generative
+                text-to-image conditional diffusion models as highly efficient
+                open-vocabulary semantic segmenters, and introduce a novel
+                training-free approach named
+                <span class="dnerf">DiffSegmenter</span>.
               </p>
               <p>
-                We show that <span class="dnerf">Nerfies</span> can turn
-                casually captured selfie photos/videos into deformable NeRF
-                models that allow for photorealistic renderings of the subject
-                from arbitrary viewpoints, which we dub <i>"nerfies"</i>. We
-                evaluate our method by collecting data using a rig with two
-                mobile phones that take time-synchronized photos, yielding
-                train/validation images of the same pose at different
-                viewpoints. We show that our method faithfully reconstructs
-                non-rigidly deforming scenes and reproduces unseen views with
-                high fidelity.
+                Specifically, by feeding an input image and candidate classes
+                into an off-theshelf pre-trained conditional latent diffusion
+                model, the crossattention maps produced by the denoising
+                <i>U-Net</i>
+                are directly used as segmentation score maps, which are further
+                refined and completed by the followed self-attention maps.
+                Additionally, we carefully design effective textual prompts and
+                a category filtering mechanism to further enhance the
+                segmentation results. Extensive experiments on three benchmark
+                datasets show that the proposed
+                <span class="dnerf">DiffSegmenter</span> achieves impressive
+                results for open-vocabulary semantic segmentation.
               </p>
             </div>
           </div>
@@ -547,11 +557,11 @@
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+        <pre><code>@article{wang2023diffusion,
+    title={Diffusion model is secretly a training-free open vocabulary semantic segmenter},
+    author={Wang, Jinglong and Li, Xiawei and Zhang, Jing and Xu, Qingyuan and Zhou, Qin and Yu, Qian and Sheng, Lu and Xu, Dong},
+    journal={arXiv preprint arXiv:2309.02773},
+    year={2023}
 }</code></pre>
       </div>
     </section>
