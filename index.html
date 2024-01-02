@@ -272,45 +272,94 @@
       </div>
     </section>
 
-    <section class="hero is-light">
+    <section class="hero is-light is-small">
       <div class="hero-body">
         <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column">
-              <div class="content">
-                <h2 class="title is-4">Open Vocabulary Segmentation</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="section-title">
+                <h2 class="title is-3 is-centered">Better Segmentation</h2>
+              </div>
+              <div class="has-text-justified">
                 <p>
-                  Table below shows a comparison of our method to previous work
-                  on zero-shot open-vocabulary semantic segmentation. We
-                  evaluate mIoU on three datasets: VOC, Context, and Object.
-                  Compared to previous training-based approaches, our method
-                  exhibits a significant improvement in mIoU across different
-                  datasets, showing the strong zero-shot generalization
-                  capability of our method.
+                  Here are some more segmentation results for open-vocabulary &
+                  weakly-supervised Segmentation. We can see that our proposed
+                  <span class="dnerf">DiffSegmenter</span> can achieve better
+                  segmentation results than previous methods.
                 </p>
-                <img
-                  src="./static/images/open_vocabulary.png"
-                  alt="Open Vocabulary Segmentation Result"
-                  width="100%"
-                />
+              </div>
+              <div class="carousel" style="overflow: hidden">
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/open1.png"
+                    alt="Open Vocabulary Segmentation Result 1"
+                  />
+                </div>
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/open2.png"
+                    alt="Open Vocabulary Segmentation Result 2"
+                  />
+                </div>
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/weak1.png"
+                    alt="Weakly Supervised Segmentation Result 1"
+                  />
+                </div>
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/weak2.png"
+                    alt="Weakly Supervised Segmentation Result 2"
+                  />
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="column">
-              <h2 class="title is-4">Weakly Supervised Segmentation</h2>
-              <div class="columns is-centered">
-                <div class="column content">
-                  <p>
-                    Table below shows the segmentation results of the training
-                    set of VOC with image-level class labels. Our method results
-                    in an mIoU of 70.5%, which significantly outperforms most of
-                    the discriminative model-based baseline methods with
-                    image-level supervision.
-                  </p>
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="section-title">
+                <h2 class="title is-3 is-centered">Improving Image Editing</h2>
+              </div>
+              <div class="content has-text-justified">
+                <p>
+                  Diffusion-based image editing methods highly rely on the
+                  quality of cross-attention maps. Here we show that our
+                  <span class="dnerf">DiffSegmenter</span> can improve the
+                  quality of such segmentation maps, and thus improve the image
+                  editing results.
+                </p>
+              </div>
+              <div class="carousel" style="overflow: hidden">
+                <div class="carousel-item-box">
                   <img
-                    src="./static/images/weakly_supervised.png"
-                    alt="Weakly Supervised Segmentation Result"
-                    width="100%"
+                    src="static/images/down1.png"
+                    alt="Open Vocabulary Segmentation Result 1"
+                  />
+                </div>
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/down2.png"
+                    alt="Open Vocabulary Segmentation Result 2"
+                  />
+                </div>
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/down3.png"
+                    alt="Weakly Supervised Segmentation Result 1"
+                  />
+                </div>
+                <div class="carousel-item-box">
+                  <img
+                    src="static/images/down4.png"
+                    alt="Weakly Supervised Segmentation Result 2"
                   />
                 </div>
               </div>
