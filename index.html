@@ -6,7 +6,10 @@
       name="description"
       content="An Open Vocabulary Semantic Segmenter based on Diffusion Models."
     />
-    <meta name="keywords" content="DiffSegmenter, Diffusion, Segmentation" />
+    <meta
+      name="keywords"
+      content="DiffSegmenter, Diffusion, Segmentation, Open Vocabulary"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
       Diffusion Model is Secretly a Training-free Open Vocabulary Semantic
@@ -97,13 +100,22 @@
                 Semantic Segmenter
               </h1>
               <div class="is-size-5 publication-authors">
-                <span class="author-block">Jinglong Wang<sup>1*</sup>,</span>
-                <span class="author-block">Xiawei Li<sup>1*</sup>,</span>
+                <span class="author-block"
+                  ><a href="https://github.com/wangjl-nb">Jinglong Wang</a
+                  ><sup>1*</sup>,</span
+                >
+                <span class="author-block"
+                  ><a href="https://github.com/Sunny599">Xiawei Li</a
+                  ><sup>1*</sup>,</span
+                >
                 <span class="author-block">
                   <a href="https://hellojing89.github.io/">Jing Zhang</a
                   ><sup>1&dagger;</sup>,
                 </span>
-                <span class="author-block">Qingyuan Xu<sup>1</sup>, </span>
+                <span class="author-block"
+                  ><a href="https://github.com/xu7yue">Qingyuan Xu</a
+                  ><sup>1</sup>,
+                </span>
                 <span class="author-block">
                   <a href="https://matrix53.github.io">Qin Zhou</a><sup>1</sup>,
                 </span>
@@ -145,7 +157,6 @@
 
               <div class="column has-text-centered">
                 <div class="publication-links">
-                  <!-- PDF Link. -->
                   <span class="link-block">
                     <a
                       href="https://arxiv.org/pdf/2309.02773.pdf"
@@ -168,6 +179,17 @@
                       <span>arXiv</span>
                     </a>
                   </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/VCG-team/DiffSegmenter"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -181,7 +203,7 @@
         <div class="hero-body">
           <img
             id="teaser"
-            src="./static/images/main_comparision1.png"
+            src="./static/images/main_comparision.png"
             alt="Main Comparision with Baseline"
           />
           <h2 class="subtitle has-text-centered">
@@ -282,8 +304,9 @@
               </div>
               <div class="has-text-justified">
                 <p>
-                  Here are some more segmentation results for open-vocabulary &
-                  weakly-supervised segmentation. We can see that our proposed
+                  Here are some more segmentation results for open-vocabulary
+                  and weakly-supervised semantic segmentation. We can see that
+                  our proposed
                   <span class="dnerf">DiffSegmenter</span> can achieve better
                   segmentation results than previous methods.
                 </p>
@@ -291,26 +314,14 @@
               <div class="carousel" style="overflow: hidden">
                 <div class="carousel-item-box">
                   <img
-                    src="static/images/open1.png"
-                    alt="Open Vocabulary Segmentation Result 1"
+                    src="static/images/open_vocabulary.png"
+                    alt="Open Vocabulary Segmentation Result"
                   />
                 </div>
                 <div class="carousel-item-box">
                   <img
-                    src="static/images/open2.png"
-                    alt="Open Vocabulary Segmentation Result 2"
-                  />
-                </div>
-                <div class="carousel-item-box">
-                  <img
-                    src="static/images/weak1.png"
-                    alt="Weakly Supervised Segmentation Result 1"
-                  />
-                </div>
-                <div class="carousel-item-box">
-                  <img
-                    src="static/images/weak2.png"
-                    alt="Weakly Supervised Segmentation Result 2"
+                    src="static/images/weakly_supervised.png"
+                    alt="Weakly Supervised Segmentation Result"
                   />
                 </div>
               </div>
@@ -326,7 +337,9 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
               <div class="section-title">
-                <h2 class="title is-3 is-centered">Improving Image Editing</h2>
+                <h2 class="title is-3 is-centered">
+                  More Application: Improving Image Editing
+                </h2>
               </div>
               <div class="content has-text-justified">
                 <p>
@@ -334,10 +347,11 @@
                     href="https://github.com/google/prompt-to-prompt"
                     >Prompt-to-Prompt</a
                   >
-                  etc.) highly rely on the quality of cross-attention maps. Here
-                  we show that our <span class="dnerf">DiffSegmenter</span> can
-                  improve the quality of such segmentation maps, and thus
-                  improve the image editing results.
+                  etc.) highly rely on the quality of object segmentation masks.
+                  Here we show that our proposed
+                  <span class="dnerf">DiffSegmenter</span> can improve the
+                  quality of such masks, and thus improve the image editing
+                  results.
                 </p>
               </div>
               <div class="carousel" style="overflow: hidden">
@@ -357,12 +371,6 @@
                   <img
                     src="static/images/down3.png"
                     alt="Weakly Supervised Segmentation Result 1"
-                  />
-                </div>
-                <div class="carousel-item-box">
-                  <img
-                    src="static/images/down4.png"
-                    alt="Weakly Supervised Segmentation Result 2"
                   />
                 </div>
               </div>
