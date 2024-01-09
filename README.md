@@ -1,6 +1,6 @@
 # DiffSegmenter-webpage
 
-Webpage for "Diffusion Model is Secretly a Training-free Open Vocabulary Semantic Segmenter". Official implementation is [here](https://github.com/VCG-team/DiffSegmenter).
+Webpage for "Diffusion Model is Secretly a Training-free Open Vocabulary Semantic Segmenter". Official implementation for DiffSegmenter is [here](https://github.com/VCG-team/DiffSegmenter).
 
 # Acknowledgements
 
